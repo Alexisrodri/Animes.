@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --fondo:#222831;
+  --contrast:#393E46;
+  --texts:#ee4139;
+  --subtitle:#0b64ee;
+  --title:#EEEEEE;
+  --texts-2:#f9da00;
+  --font-32:32px;
+  --font-18:18px;
+  --fuente: 'PT Sans', sans-serif;;
+  --font-12:12px;
+}
+
+body{
+  background:var(--fondo);
+}
+
+#root {
+  color: var(--title);
+  height: 120vh;
+  font-family: var(--fuente);
+}
+
+.Links {
+  height: 150px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.content__item {
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  counter-increment: itemcounter;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.button {
+  pointer-events: auto;
+  cursor: pointer;
+  background: #e7e7e7;
+  border: none;
+  padding: 1rem 2.5rem;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+}
+
+.button::before, .button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.button--mimas {
+	text-transform: uppercase;
+	letter-spacing: 0.05rem;
+	font-weight: 700;
+	font-size: 0.85rem;
+	border-radius: 0.5rem;
+	overflow: hidden;
+	color: #fff;
+	background: var(--texts-2);
+}
+
+.button--mimas span {
+	position: relative;
+  color: var(--texts-2);
+	mix-blend-mode: difference;
+}
+
+.button--mimas::before {
+	content: '';
+	background:var(--title);
+	width: 130%;
+	left: -12%;
+	transform: skew(30deg);
+	transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.button--mimas:hover::before {
+	transform: translate3d(100%,0,0);
+}
+
+.section-one {
+  width: 30%;
+  display: flex;
+  padding:15px;
+  flex-direction: column;
+}
+
+.Title {
+  width: 100%;
+  text-align: center;
+} 
+
+
+.Buscador {
+  max-width: 100%;
+  height: 90vh;
+  display: flex;
+}
+
+.Articulo-find {
+  max-width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: var(--texts);
+  align-items:flex-start;
+  font-size: 32px;
+  padding: 30px;
+  gap: 20px;
+}
+
+p.articulo-des {
+  font-size: 18px;
+  color: var(--subtitle);
+}
+
+ .cont-buscador {
+  width: 60%;
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  font-size: var(--font-18);
+  color:var(--subtitle);
+  align-items: center;
+}
+
+.nav-links {
+  text-decoration: none;
+  color: var(--texts-2);
+}
+
+.Main {
+  height: 160vh;
+  background:var(--fondo);
+}
+
+.Paginacion {
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: var(--font-32);
+}
+
+.btn-paginacion {
+  padding: 10px;
+  border: transparent;
+  border-radius: 5px;
+}
+
+.anime-links {
+  text-decoration: none;
+  color: var(--title);
+  font-size: var(--font-18);
+  letter-spacing: 1.5px;
+}
+
+  .anime-images {
+  max-width: 100px;
+  transition:.3s ease-in;
+}
+
+.anime-images:hover {
+  filter: drop-shadow(0 0 10px var(--texts-2));
+  border-radius: 10px;
+}
+
+.cont-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.Anime-List {
+  display: grid;
+  width: 100%;
+  padding: 40px ;
+  grid-template-columns: repeat(auto-fill, minmax(100px,200px));
+  grid-auto-rows: 230px;
+  grid-gap: 2rem;
+  grid-row-gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.Busqueda-animes {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.anime-busqueda {
+  height: 100px;
+  width: 80px;
+}
+
+.cont-busqueda {
+  font-size: 20px;
+  width: 45%;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+}
+
+.anime-name{
+  text-decoration: none;
+  color:var(--title);
+
+}
+
+.formulario {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-buscador {
+  width: 60%;
+  padding: 8px;
+  border: transparent;
+  border-radius: 8px;
+  outline: none;
+}
+
+footer {
+  padding: 30px 50px;
+  display: grid;
+  grid-template-columns: auto auto;
+  font-size: var(--font-18);
+  justify-content: space-between;
+}
+
+a {
+  color: #1b57e3;
+  text-decoration: none;
+}
