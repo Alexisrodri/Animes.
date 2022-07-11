@@ -15,7 +15,8 @@ const Mangas = () => {
         const Data = await MangasApi(25, page)
         setMangas(Data);
         setCargando(false);  
-        setTotal(Math.floor(Data.meta.last_page/25));
+        const Paginas = Math.floor(Data.meta.last_page/25);
+        setTotal(Paginas);
         }catch(error){}
       }
 
