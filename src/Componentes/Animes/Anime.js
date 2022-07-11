@@ -14,7 +14,7 @@ const FetchAnime = async() =>{
     const Datos = await AnimeApi(25,  page);
     setAnimes(Datos.data);
     setCargando(false);  
-    setTotal(Math.floor(Datos.meta.last_page/25));
+    setTotal(Math.round(Datos.meta.last_page/25));
   }catch(error){}
 }
 
