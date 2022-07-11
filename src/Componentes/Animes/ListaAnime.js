@@ -20,8 +20,8 @@ const AnimeList = ({animes,page,cargando,setPage,total}) =>{
             <Paginacion pages={page } totalPages={total} clickDerecho={lastPages} clickIzquierdo={nextPages} />
         <section className="Anime-List">
         {cargando ?
-        <div className="box-cargando">
-            <h3 className="Cargando">cargando...</h3>
+        <div className="Cont-Loading">
+            <h3 className="Cargando">Cargando Animes...</h3>
         </div>
         :
         animes.map((anime)=>{
@@ -31,7 +31,8 @@ const AnimeList = ({animes,page,cargando,setPage,total}) =>{
                 <a href={anime.url} className='anime-links' >{anime.title}</a>
                 </picture>
             )
-        })}
+        })
+        }
         </section>
         </>
     )

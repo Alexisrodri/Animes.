@@ -13,11 +13,11 @@ function App() {
     <Route path='/Animes' component={AnimesPages} />
     <Route path='/Manga' component={Mangas} />
     <footer>
-        <div class="left">
+        <div className="left">
             <small>2017-2022 <b>Jikan.moe</b>
         </small></div><small>
 
-        <div class="right">
+        <div className="right">
                 <small>This website is open-source. <a href="https://github.com/jikan-me/website"><b>Help by making it better.</b></a></small>
         </div>
     </small></footer>

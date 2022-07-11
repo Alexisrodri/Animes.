@@ -36,6 +36,25 @@ body{
   align-items: center;
 }
 
+.Cont-Loading {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1/7;
+  grid-row: 1/4;
+  grid-template-rows: repeat(4,1fr);
+  grid-template-columns: repeat(5,1fr);
+}
+
+.Cargando {
+  text-align: center;
+  color: var(--texts-2);
+  grid-column: 3;
+  grid-row: 2;
+}
+
 .content__item {
   width: 300px;
   height: 100%;
@@ -260,6 +279,7 @@ p.articulo-des {
 }
 
 footer {
+  margin-top: 20px;
   padding: 30px 50px;
   display: grid;
   grid-template-columns: auto auto;

@@ -1,6 +1,6 @@
 export const AnimeFind = async (anime) =>{
     try{
-        let url = `https://api.jikan.moe/v4/anime?q=${anime}&sfw&limit=10&order_by=rating `;
+        let url = `https://api.jikan.moe/v4/anime?q=${anime}&sfw&limit=10&order_by=title,rating `;
         const res = await fetch(url);
         const data = await res.json();
         return data;

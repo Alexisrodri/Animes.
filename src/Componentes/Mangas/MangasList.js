@@ -21,8 +21,8 @@ const MangasList = ({mangas,page,cargando,setPage,total}) =>{
             <Paginacion pages={page} totalPages={total} clickDerecho={lastPages} clickIzquierdo={nextPages} />
         <section className="Anime-List">
         {cargando ?
-        <div className="box-cargando">
-            <h3 className="Cargando">cargando...</h3>
+        <div className="Cont-Loading">
+            <h3 className="Cargando">cargando Mangas...</h3>
         </div>
         :
         mangas.data.map((manga)=>{

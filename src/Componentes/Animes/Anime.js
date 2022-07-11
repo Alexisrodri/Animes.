@@ -6,7 +6,7 @@ export default function AnimesPages() {
   const [animes, setAnimes] = useState()
   const [total, setTotal] = useState(0)
   const [cargando, setCargando] = useState(true)
-  const [page, setPage] = useState(38)
+  const [page, setPage] = useState(1)
 
 const FetchAnime = async() =>{
   try{
