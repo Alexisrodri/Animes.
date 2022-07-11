@@ -15,7 +15,7 @@ const Paginacion = ({pages,totalPages,clickDerecho,clickIzquierdo}) => {
       <p>{pages}</p>
         <button className="button button--mimas" onClick={clickDerecho} ><span className="pagination-span">⬅ Last</span></button>
         <button className="button button--mimas" onClick={clickIzquierdo} ><span className="pagination-span">Next ➡</span></button>
-        <p>{Math.floor(totalPages/25)}</p>
+        <p>{totalPages}</p>
         </div>
     )
 }
