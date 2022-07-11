@@ -2,10 +2,8 @@ import React from "react";
 import { Link } from "wouter";
 
 const Paginacion = ({pages,totalPages,clickDerecho,clickIzquierdo}) => {
-    
-    console.log(pages);
-    console.log(totalPages);
-    return(
+  
+  return(
         <div className="Paginacion" >
         <button className="button button--mimas">
       <span>
@@ -17,7 +15,7 @@ const Paginacion = ({pages,totalPages,clickDerecho,clickIzquierdo}) => {
       <p>{pages}</p>
         <button className="button button--mimas" onClick={clickDerecho} ><span className="pagination-span">⬅ Last</span></button>
         <button className="button button--mimas" onClick={clickIzquierdo} ><span className="pagination-span">Next ➡</span></button>
-        <p>{totalPages}</p>
+        <p>{Math.floor(totalPages/25)}</p>
         </div>
     )
 }

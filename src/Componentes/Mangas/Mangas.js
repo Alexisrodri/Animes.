@@ -5,7 +5,7 @@ import MangasList from './MangasList'
 const Mangas = () => {
 
     const [mangas, setMangas] = useState([])
-    const [total, setTotal] = useState()
+    const [total, setTotal] = useState(106)
     const [cargando, setCargando] = useState(true)
     const [page, setPage] = useState(1)
 
@@ -15,8 +15,7 @@ const Mangas = () => {
         const Data = await MangasApi(25, page)
         setMangas(Data);
         setCargando(false);  
-        const Paginas = Math.floor(Data.meta.last_page/25);
-        setTotal(Paginas);
+        setTotal(Data.meta.last_page);
         }catch(error){}
       }
 

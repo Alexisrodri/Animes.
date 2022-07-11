@@ -4,7 +4,7 @@ import { AnimeApi } from '../../Fetch'
 
 export default function AnimesPages() {
   const [animes, setAnimes] = useState()
-  const [total, setTotal] = useState()
+  const [total, setTotal] = useState(39)
   const [cargando, setCargando] = useState(true)
   const [page, setPage] = useState(1)
 
@@ -14,8 +14,7 @@ const FetchAnime = async() =>{
     const Datos = await AnimeApi(25,  page);
     setAnimes(Datos.data);
     setCargando(false);  
-    const Paginas = Math.floor(Datos.meta.last_page/25);
-    setTotal(Paginas);
+    setTotal(Datos.meta.last_page);
   }catch(error){}
 }
 

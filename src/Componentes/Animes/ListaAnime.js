@@ -17,7 +17,7 @@ const AnimeList = ({animes,page,cargando,setPage,total}) =>{
     
     return(
         <>
-            <Paginacion pages={page } totalPages={total} clickDerecho={lastPages} clickIzquierdo={nextPages} />
+            <Paginacion pages={page} totalPages={total} clickDerecho={lastPages} clickIzquierdo={nextPages} />
         <section className="Anime-List">
         {cargando ?
         <div className="Cont-Loading">
